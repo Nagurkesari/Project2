@@ -8,8 +8,8 @@ public class DB {
 	public static Connection getConnection(){
 		Connection con=null;
 		try{
-			Class.forName("com.mysql.jdbc.Driver");
-			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/new", "root", "toor");
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/new", "root", "nagur");
 			PreparedStatement ps=con.prepareStatement("select studentname, email, fine from student into outfile 'testing.csv' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'; ");
 			ResultSet rs=ps.executeQuery();
 			boolean status = rs.next();

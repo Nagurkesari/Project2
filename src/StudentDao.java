@@ -25,7 +25,7 @@ public class StudentDao {
 		
 		try {
 			Connection con=DB.getConnection();
-			PreparedStatement ps=con.prepareStatement("select fine from books where studentid=?");
+			PreparedStatement ps=con.prepareStatement("select fine from student where studentid=?");
 			ps.setInt(1,studentid);
 			ResultSet rs=ps.executeQuery();
 			if(fi>0) {

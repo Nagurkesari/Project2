@@ -80,7 +80,7 @@ public class Fine {
 					frame.dispose();
 				}
 				else{
-					JOptionPane.showMessageDialog(StudentDao.frame,"Sorry, unable to repay!");
+					JOptionPane.showMessageDialog(StudentDao.frame,"Fine paid successfully");
 				}
 				
 				}else{
